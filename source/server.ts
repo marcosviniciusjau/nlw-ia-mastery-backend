@@ -1,12 +1,11 @@
 import {fastify} from 'fastify'
+import { prisma } from './lib/prisma'
+import { getAllPromptsRoute } from './routes/get-ai-prompts'
 
 const app= fastify()
-app.get('/',()=>{
-  return 'Hello World'
-})
-
+app.register(getAllPromptsRoute)
 app.listen({
-  port:3333,
+  port: 3333,
 }).then(()=>{
   console.log('HTTP Server running')
 })
