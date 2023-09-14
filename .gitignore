@@ -6,3 +6,5 @@ prisma
 package.json
 pnpm-lock.yaml
 routes.http
+temp
+example.mp3
